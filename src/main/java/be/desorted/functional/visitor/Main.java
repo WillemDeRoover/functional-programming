@@ -4,6 +4,10 @@ import be.desorted.functional.visitor.model.Body;
 import be.desorted.functional.visitor.model.Car;
 import be.desorted.functional.visitor.model.Engine;
 import be.desorted.functional.visitor.model.Wheel;
+import be.desorted.functional.visitor.visitable.Visitable;
+import be.desorted.functional.visitor.visitable.VisitableFactory;
+import be.desorted.functional.visitor.visitor.Visitor;
+import be.desorted.functional.visitor.visitor.VisitorInitializer;
 
 import java.util.List;
 import java.util.stream.Collectors;

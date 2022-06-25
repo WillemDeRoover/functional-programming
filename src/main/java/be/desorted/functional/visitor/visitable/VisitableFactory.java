@@ -1,4 +1,4 @@
-package be.desorted.functional.visitor;
+package be.desorted.functional.visitor.visitable;
 
 import java.util.function.Function;
 import java.util.stream.Stream;

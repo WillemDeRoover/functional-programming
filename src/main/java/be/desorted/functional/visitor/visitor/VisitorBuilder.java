@@ -1,4 +1,4 @@
-package be.desorted.functional.visitor;
+package be.desorted.functional.visitor.visitor;
 
 import be.desorted.functional.visitor.model.Car;
 

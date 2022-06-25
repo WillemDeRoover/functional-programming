@@ -1,11 +1,7 @@
 package be.desorted.functional.visitor.model;
 
 
-import be.desorted.functional.visitor.Visitor;
-
 import java.util.Arrays;
-import java.util.stream.Collector;
-import java.util.stream.Stream;
 
 public class Car {
 

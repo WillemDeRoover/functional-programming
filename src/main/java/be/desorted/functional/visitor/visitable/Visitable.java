@@ -1,7 +1,8 @@
-package be.desorted.functional.visitor;
+package be.desorted.functional.visitor.visitable;
+
+import be.desorted.functional.visitor.visitor.Visitor;
 
 import java.util.stream.Collector;
-import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public interface Visitable<T> {
