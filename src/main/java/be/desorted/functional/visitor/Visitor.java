@@ -3,6 +3,7 @@ package be.desorted.functional.visitor;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.function.Function;
+import java.util.function.Supplier;
 
 public interface Visitor<R> {
 
@@ -30,7 +31,7 @@ public interface Visitor<R> {
     interface Y<R> extends VisitorInitializer<R>{
 
         default <T> Z<T, R> forType(Class<T> type) {
-            return index -> index == 0 ? type : this;
+            return () -> new A<>(type, this);
         }
 
         default Y<R> andThen(Y<R> after) {
@@ -38,16 +39,14 @@ public interface Visitor<R> {
         }
     }
 
-    interface Z<T, R> {
-
-        Object get(int index);
+    interface Z<T, R> extends Supplier<A<T,R>> {
 
         default Class<T> type() {
-            return (Class<T>) get(0);
+            return get().type;
         }
 
         default Y<R> previous() {
-            return (Y<R>) get(1);
+            return get().y;
         }
 
         default Y<R> execute(Function<T, R> function) {
@@ -55,4 +54,6 @@ public interface Visitor<R> {
         }
 
     }
+
+    record A<T, R>(Class<T> type, Y<R> y) {}
 }
