@@ -17,7 +17,24 @@
   </properties>
 
   <dependencies>
+    <!-- https://mvnrepository.com/artifact/com.google.cloud/google-cloud-workflows -->
+    <dependency>
+      <groupId>com.google.cloud</groupId>
+      <artifactId>google-cloud-workflows</artifactId>
+      <version>2.3.2</version>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/com.google.cloud/google-cloud-workflow-executions -->
+    <dependency>
+
+      <groupId>com.google.cloud</groupId>
+      <artifactId>google-cloud-workflow-executions</artifactId>
+      <version>2.3.2</version>
+    </dependency>
+
   </dependencies>
+
+
 
   <build>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
